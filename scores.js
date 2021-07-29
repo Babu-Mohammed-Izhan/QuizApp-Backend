@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 
-const uri = "mongodb+srv://izhan:izhan@cluster0.airbl.mongodb.net/quizscoresDatabase?retryWrites=true&w=majority";
+const uri = process.env.MONGO_URI
 
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true })
     .then(() => {
